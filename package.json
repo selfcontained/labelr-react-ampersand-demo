@@ -1,0 +1,52 @@
+{
+  "name": "labelr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "prebuild": "rm -rf public && mkdir public",
+    "build": "NODE_ENV=production webpack",
+    "deploy": "surge -p public -d labelr.selfcontained.surge.sh",
+    "yolo": "npm run build && npm run deploy",
+    "test": "standard"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "surge": "^0.11.1",
+    "json-loader": "^0.5.1",
+    "yeticss": "^6.0.5",
+    "style-loader": "^0.12.1",
+    "css-loader": "^0.12.0",
+    "stylus-loader": "^1.1.0",
+    "file-loader": "^0.8.1",
+    "url-loader": "^0.5.5",
+    "postcss-loader": "^0.4.3",
+    "autoprefixer-core": "^5.1.11",
+    "react": "^0.13.2",
+    "react-hot-loader": "^1.2.5",
+    "node-libs-browser": "^0.5.0",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2",
+    "babel": "^5.1.13",
+    "babel-core": "^5.1.13",
+    "babel-loader": "^5.0.0",
+    "hjs-webpack": "^2.0.1",
+    "ampersand-router": "^3.0.2",
+    "ampersand-app": "^1.0.4",
+    "local-links": "^1.4.0",
+    "qs": "^2.4.2",
+    "node-uuid": "^1.4.3",
+    "ampersand-react-mixin": "^0.1.3",
+    "ampersand-rest-collection": "^4.0.0",
+    "octicons": "^2.2.0",
+    "autoprefixer-stylus": "^0.5.0",
+    "standard": "^4.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "public/*"
+    ]
+  }
+}
